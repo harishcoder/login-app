@@ -1,0 +1,35 @@
+<div class="container">
+          
+          <h2> Register yourself</h2>
+    {{#if errors}}
+            {{#each errors}}
+            <div class="alert alert-danger">{{msg}}</div>
+            {{/each}}
+    {{/if}}
+      <form method="post" action="/users/register" class="style">
+         <label >
+            <h5>Name </h5>
+             <input name = 'name' type="text" placeholder="Enter your name" class="form-control">
+          </label> 
+          <label >
+            <h5>Email </h5>
+             <input name = 'email' type="text" placeholder="Enter your Email" class="form-control">
+          </label> 
+          <label >
+            <h5>Username </h5>
+             <input name = 'username' type="text" placeholder="Enter Username" class="form-control">
+          </label> 
+          <label >
+            <h5>Enter password </h5>
+             <input  name = 'password' type="text" placeholder="Enter New Password" class="form-control">
+          </label> 
+          <label name = 'confirmpassword'>
+            <h5>Enter password </h5>
+             <input name = 'password1' type="text" placeholder="Confirm Password" class="form-control">
+          </label> 
+        
+          <button type="submit" name="submit" value="register" class="btn btn-outline-success my-2 my-sm-0">submit</button> 
+          <br><br>
+          
+     </form>
+          
